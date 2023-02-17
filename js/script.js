@@ -5,9 +5,17 @@ document.getElementById('calculate-triangle').addEventListener('click', function
     if (!base || !height) {
         return;
     }
-
     setAreaCalculation('Triangle', 0.5 * base * height);
+});
 
+document.getElementById('calculate-rectangle').addEventListener('click', function () {
+    const width = getInputValue('rectangle-w');
+    const height = getInputValue('rectangle-l');
+
+    if (!width || !height) {
+        return;
+    }
+    setAreaCalculation('Rectangle', width * height);
 });
 
 function getInputValue(id) {
