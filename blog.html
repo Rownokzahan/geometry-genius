@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry</title>
+
+    <!-- tailwind CDN tdnk-->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="max-w-[1440px] mx-auto">
+    <header>
+        <nav class="bg-blue-50 px-8 py-2 flex items-center justify-between">
+            <a href="index.html" class="text-xl font-bold leading-none">
+                Interactive <br>
+                <span class="text-base text-slate-500">Geometry Genius</span>
+            </a>
+            <a class="text-white px-4 py-1 bg-blue-600 rounded" href="blog.html">Blog</a>
+        </nav>
+    </header>
+
+    <main class="m-10 md:m-20 text-justify">
+        <div class="mb-10">
+            <h2 class="text-xl font-bold">2. What is DOM and what is the purpose of DOM?</h2>
+            <p class="pl-6 mt-4">
+                The DOM stands for Document Object Model. DOM creates a structured representation of a web page in the form of a tree-tdke structure, where each element on the page is represented as a node in the tree.
+                <br>
+                The purpose of DOM is to be able to access the content, structure, and style for every element of web pages and change or modify if needed.
+            </p>
+        </div>
+        <div class="mb-10">
+            <h2 class="text-xl font-bold">2. How will you select HTML elements using DOM? Name the DOM methods.</h2>
+            <div class="pl-6 mt-4">
+                <p>HTML elements can be selected by using five methods bellow</p>
+                <table class="table-auto ml-5">
+                    <tr>
+                        <td class="font-semibold">1. </td>
+                        <td>Tag Name</td>
+                        <td>:&nbsp; </td>
+                        <td class="text-blue-900">getElementsByTagName()</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">2. </td>
+                        <td>Class Name</td>
+                        <td>:</td>
+                        <td class="text-blue-900">getElementsByClassName()</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">3. </td>
+                        <td>ID</td>
+                        <td>:</td>
+                        <td class="text-blue-900">getElementById()</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">4. </td>
+                        <td>Query Selector</td>
+                        <td>:</td>
+                        <td class="text-blue-900">querySelector()</td>
+                    </tr>
+                    <tr>
+                        <td class="font-semibold">5. </td>
+                        <td>Query Selector All &nbsp;</td>
+                        <td>:</td>
+                        <td class="text-blue-900">querySelectorAll()</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="mb-10">
+            <h2 class="text-xl font-bold">3. What is event bubble?</h2>
+            <p class="pl-6 mt-4">
+                When an event is applied on an element (like click or mouseover), after the event has completed it continues to "bubble up" through the hierarchy of parent elements and triggers the event listeners of parent elements. This behavior is called event buble.
+            </p>
+        </div>
+
+        <div class="mb-10">
+            <h2 class="text-xl font-bold">4. What is a callback function and why will you use it?</h2>
+            <p class="pl-6 mt-4">
+                A callback function is a function that is given as an argument to another function.It can be called by the receiving function at a certain point in its execution.
+                <br>
+                I will use callback function for  cleaner, more efficient code that is easier to modify and maintain over time.
+                For example If some line of similer line of codes needs to happen for multiple function instead of repeating them here the callback function can be used.
+            </p>
+        </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+
+    <script>
+        document.querySelectorAll
+    </script>
+</body>
+
+</html>
