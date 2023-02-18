@@ -43,7 +43,7 @@ document.getElementById('pentagon-btn').addEventListener('click', function () {
     if (!base || !height) {
         return;
     }
-    setAreaCalculation('Triangle', 0.5 * base * height);
+    setAreaCalculation('Pentagon', 0.5 * base * height);
 });
 
 document.getElementById('ellipse-btn').addEventListener('click', function () {
@@ -78,7 +78,9 @@ function getInputValue(id) {
         document.querySelector(`#${id} + p`).classList.remove('hidden');
         return false;
     }
-
+    
+    document.querySelector(`#${id}`).classList.remove('border', 'border-red-700');
+    document.querySelector(`#${id} + p`).classList.add('hidden');
     return value;
 }
 
