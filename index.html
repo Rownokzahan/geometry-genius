@@ -22,8 +22,8 @@
         </nav>
     </header>
 
-    <main class="mt-8 mx-8 grid grid-cols-3 gap-4 md:gap-2">
-        <section class="col-span-2 grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-2 w-full">
+    <main class="mt-8 mx-8 grid md:grid-cols-3 gap-4 md:gap-2">
+        <section class="col-span-2 grid md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-2">
             <!-- Triangle -->
             <div class="p-4 md:p-8 flex flex-col items-center rounded border">
                 <img src="./images/triangle.png" class="w-full h-36" alt="">
@@ -48,7 +48,7 @@
                     </div>
                     <span>cm</span>
                 </div>
-                <button id="calculate-triangle"
+                <button id="triangle-btn"
                     class="text-white px-4 py-1 bg-blue-600 rounded w-full">Calculate</button>
             </div>
 
@@ -58,26 +58,138 @@
                 <h3 class="text-xl font-bold mt-4 md:mt-8">Rectangle</h3>
                 <p>Area (A) = w × l</p>
                 <div class="flex gap-2 items-center mb-4 md:mb-8 mt-2 md:mt-4">
-                    <div class="flex bg-slate-300 px-2 rounded">
-                        <label for="rectangle-w">w</label>
-                        <input class="bg-transparent w-full ml-2 px-2" type="text" name="" id="rectangle-w">
+                    <div class="flex">
+                        <label class="px-2 h-fit rounded-l bg-slate-300" for="rectangle-w">w</label>
+                        <div>
+                            <input class="bg-slate-300 rounded-r w-full px-1" type="text" name="" id="rectangle-w">
+                            <p class="hidden text-red-700">Invalid</p>
+                        </div>
                     </div>
                     <span>cm</span>
-                    <div class="flex bg-slate-300 px-2 rounded">
-                        <label for="rectangle-l">l</label>
-                        <input class="bg-transparent w-full ml-2 px-2" type="text" name="" id="rectangle-l">
+                    <div class="flex">
+                        <label class="px-2 h-fit rounded-l bg-slate-300" for="rectangle-l">l</label>
+                        <div>
+                            <input class="bg-slate-300 rounded-r w-full px-1" type="text" name="" id="rectangle-l">
+                            <p class="hidden text-red-700">Invalid</p>
+                        </div>
                     </div>
                     <span>cm</span>
                 </div>
-                <button id="calculate-rectangle" class="text-white px-4 py-1 bg-blue-600 rounded w-full">Calculate</button>
+                <button id="rectangle-btn"
+                    class="text-white px-4 py-1 bg-blue-600 rounded w-full">Calculate</button>
+            </div>
+
+            <!-- Parallelogram -->
+            <div class="p-4 md:p-8 flex flex-col items-center rounded border">
+                <img src="./images/parallelogram.png" class="w-full h-36" alt="">
+                <h3 class="text-xl font-bold mt-4 md:mt-8">Parallelogram</h3>
+                <p>Area (A) = b × h</p>
+                <div class="flex gap-2 items-center mb-4 md:mb-8 mt-2 md:mt-4">
+                    <div class="flex">
+                        <label class="px-2 h-fit rounded-l bg-slate-300" for="parallelogram-b">b</label>
+                        <div>
+                            <input class="bg-slate-300 rounded-r w-full px-1" type="text" name="" id="parallelogram-b">
+                            <p class="hidden text-red-700">Invalid</p>
+                        </div>
+                    </div>
+                    <span>cm</span>
+                    <div class="flex">
+                        <label class="px-2 h-fit rounded-l bg-slate-300" for="parallelogram-h">h</label>
+                        <div>
+                            <input class="bg-slate-300 rounded-r w-full px-1" type="text" name="" id="parallelogram-h">
+                            <p class="hidden text-red-700">Invalid</p>
+                        </div>
+                    </div>
+                    <span>cm</span>
+                </div>
+                <button id="parallelogram-btn"
+                    class="text-white px-4 py-1 bg-blue-600 rounded w-full">Calculate</button>
+            </div>
+
+            <!-- Rhombus -->
+            <div class="p-4 md:p-8 flex flex-col items-center rounded border">
+                <img src="./images/rhombus.png" class="w-full h-36" alt="">
+                <h3 class="text-xl font-bold mt-4 md:mt-8">Rhombus</h3>
+                <p>Area (A) = 0.5 × d<sub>1</sub> × d<sub>2</sub></p>
+                <div class="flex gap-2 items-center mb-4 md:mb-8 mt-2 md:mt-4">
+                    <div class="flex">
+                        <label class="px-2 h-fit rounded-l bg-slate-300" for="rhombus-d1">d<sub>1</sub></label>
+                        <div>
+                            <input class="bg-slate-300 rounded-r w-full px-1" type="text" name="" id="rhombus-d1">
+                            <p class="hidden text-red-700">Invalid</p>
+                        </div>
+                    </div>
+                    <span>cm</span>
+                    <div class="flex">
+                        <label class="px-2 h-fit rounded-l bg-slate-300" for="rhombus-d2">d<sub>2</sub></label>
+                        <div>
+                            <input class="bg-slate-300 rounded-r w-full px-1" type="text" name="" id="rhombus-d2">
+                            <p class="hidden text-red-700">Invalid</p>
+                        </div>
+                    </div>
+                    <span>cm</span>
+                </div>
+                <button id="rhombus-btn" class="text-white px-4 py-1 bg-blue-600 rounded w-full">Calculate</button>
+            </div>
+
+            <!-- Pentagon -->
+            <div class="p-4 md:p-8 flex flex-col items-center rounded border">
+                <img src="./images/pentagon.png" class="w-full h-36" alt="">
+                <h3 class="text-xl font-bold mt-4 md:mt-8">Pentagon</h3>
+                <p>Area (A) = 0.5 × p × b</p>
+                <div class="flex gap-2 items-center mb-4 md:mb-8 mt-2 md:mt-4">
+                    <div class="flex">
+                        <label class="px-2 h-fit rounded-l bg-slate-300" for="pentagon-p">p</label>
+                        <div>
+                            <input class="bg-slate-300 rounded-r w-full px-1" type="text" name="" id="pentagon-p">
+                            <p class="hidden text-red-700">Invalid</p>
+                        </div>
+                    </div>
+                    <span>cm</span>
+                    <div class="flex">
+                        <label class="px-2 h-fit rounded-l bg-slate-300" for="pentagon-b">b</label>
+                        <div>
+                            <input class="bg-slate-300 rounded-r w-full px-1" type="text" name="" id="pentagon-b">
+                            <p class="hidden text-red-700">Invalid</p>
+                        </div>
+                    </div>
+                    <span>cm</span>
+                </div>
+                <button id="pentagon-btn" class="text-white px-4 py-1 bg-blue-600 rounded w-full">Calculate</button>
+            </div>
+
+            <!-- Ellipse -->
+            <div class="p-4 md:p-8 flex flex-col items-center rounded border">
+                <img src="./images/ellipse.png" class="w-full h-36" alt="">
+                <h3 class="text-xl font-bold mt-4 md:mt-8">Ellipse</h3>
+                <p>Area (A) = π × a × b</p>
+                <div class="flex gap-2 items-center mb-4 md:mb-8 mt-2 md:mt-4">
+                    <div class="flex">
+                        <label class="px-2 h-fit rounded-l bg-slate-300" for="ellipse-a">a</label>
+                        <div>
+                            <input class="bg-slate-300 rounded-r w-full px-1" type="text" name="" id="ellipse-a">
+                            <p class="hidden text-red-700">Invalid</p>
+                        </div>
+                    </div>
+                    <span>cm</span>
+                    <div class="flex">
+                        <label class="px-2 h-fit rounded-l bg-slate-300" for="ellipse-b">b</label>
+                        <div>
+                            <input class="bg-slate-300 rounded-r w-full px-1" type="text" name="" id="ellipse-b">
+                            <p class="hidden text-red-700">Invalid</p>
+                        </div>
+                    </div>
+                    <span>cm</span>
+                </div>
+                <button id="ellipse-btn" class="text-white px-4 py-1 bg-blue-600 rounded w-full">Calculate</button>
             </div>
         </section>
 
         <section class="p-4 md:p-8 rounded border">
             <h3 class="text-[18px] text-center font-semibold whitespace-nowrap underline">Area Calculation</h3>
 
-            <div class="overflow-x-scroll md:overflow-x-hidden">
-                <table id="calculation-table" class="w-max mt-4">
+            <div class="overflow-x-scroll">
+                <table id="calculation-table" class="w-full mt-4">
                 </table>
             </div>
         </section>

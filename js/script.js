@@ -1,4 +1,4 @@
-document.getElementById('calculate-triangle').addEventListener('click', function () {
+document.getElementById('triangle-btn').addEventListener('click', function () {
     const base = getInputValue('triangle-b');
     const height = getInputValue('triangle-h');
 
@@ -8,7 +8,7 @@ document.getElementById('calculate-triangle').addEventListener('click', function
     setAreaCalculation('Triangle', 0.5 * base * height);
 });
 
-document.getElementById('calculate-rectangle').addEventListener('click', function () {
+document.getElementById('rectangle-btn').addEventListener('click', function () {
     const width = getInputValue('rectangle-w');
     const height = getInputValue('rectangle-l');
 
@@ -16,6 +16,44 @@ document.getElementById('calculate-rectangle').addEventListener('click', functio
         return;
     }
     setAreaCalculation('Rectangle', width * height);
+});
+
+document.getElementById('parallelogram-btn').addEventListener('click', function () {
+    const base = getInputValue('parallelogram-b');
+    const height = getInputValue('parallelogram-h');
+    if (!base || !height) {
+        return;
+    }
+    setAreaCalculation('Parallelogram', base * height);
+});
+
+document.getElementById('rhombus-btn').addEventListener('click', function () {
+    const d1 = getInputValue('rhombus-d1');
+    const d2 = getInputValue('rhombus-d2');
+    if (!d1 || !d2) {
+        return;
+    }
+    setAreaCalculation('Rhombus', 0.5 * d1 * d2);
+});
+
+document.getElementById('pentagon-btn').addEventListener('click', function () {
+    const base = getInputValue('pentagon-p');
+    const height = getInputValue('pentagon-b');
+
+    if (!base || !height) {
+        return;
+    }
+    setAreaCalculation('Triangle', 0.5 * base * height);
+});
+
+document.getElementById('ellipse-btn').addEventListener('click', function () {
+    const aAxis = getInputValue('ellipse-a');
+    const bAxis = getInputValue('ellipse-b');
+
+    if (!aAxis || !bAxis) {
+        return;
+    }
+    setAreaCalculation('Ellipse', 3.14 * aAxis * bAxis);
 });
 
 function getInputValue(id) {
