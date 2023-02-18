@@ -87,7 +87,10 @@ function getInputValue(id) {
 
 let count = 1;
 function setAreaCalculation(name, area) {
-    area = area.toFixed(2);
+    if(!Number.isInteger(area)){
+        area = area.toFixed(2);
+    }
+       
     const row = document.createElement('tr');
 
     row.innerHTML =
