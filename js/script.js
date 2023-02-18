@@ -60,7 +60,7 @@ document.getElementById('ellipse-btn').addEventListener('click', function () {
 // change background color randomly on mouse over
 const shapeCards = document.getElementsByClassName('shape-card');
 for(const shapeCard of shapeCards){
-    shapeCard.addEventListener('mouseover',function(event){
+    shapeCard.addEventListener('mouseenter',function(event){
         const letters = '0123456789ABCDEF'.split('');
         let color = '#';
         for (let i = 0; i < 6; i++) {
